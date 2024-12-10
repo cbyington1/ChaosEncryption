@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Map</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+                        
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="select-btn">
+            <span class="btn-text">Logistics Map</span>
+            <span class="arrow-dwn">
+                <i class="fa-solid fa-chevron-down"></i>
+            </span>
+        </div>
+
+        <ul class="list-items">
+            <li class="item">
+                <span class="item-text">Initial</span>
+                <div class="error-text">
+                    <i class="fa-solid fa-exclamation-circle"></i>
+                    <span class="error-message">Value must be between 3.57 and 4.0</span>
+                </div>
+                <input type="text" class="item-input initial-input" placeholder="Type here">
+                <span class="question-mark"><i class="fa-solid fa-question-circle"></i><span class="tooltip-text">Initial position for
+                    the Logistics Map (3.57 - 4.0)</span></span>
+            </li>
+            <li class="item">
+                <span class="item-text">Iterations</span>
+                <div class="error-text">
+                    <i class="fa-solid fa-exclamation-circle"></i>
+                    <span class="error-message">Value must be between 20 and 100</span>
+                </div>
+                <input type="text" class="item-input iterations-input" placeholder="Type here">
+                <span class="question-mark"><i class="fa-solid fa-question-circle"></i><span class="tooltip-text">The number of iterations
+                    for each r value (20 - 100)</span></span>
+            </li>
+            <li class="item">
+                <span class="item-text">Transient</span>
+                <div class="error-text">
+                    <i class="fa-solid fa-exclamation-circle"></i>
+                    <span class="error-message">Value must be between 100 and 500</span>
+                </div>
+                <input type="text" class="item-input transient-input" placeholder="Type here">
+                <span class="question-mark"><i class="fa-solid fa-question-circle"></i><span class="tooltip-text">The number of transient
+                    iterations for each r value (100 - 500)</span></span>
+            </li>
+        </ul>
+
+        <!-- Save button -->
+        <button class="save-btn" style="display: none;">Save</button>
+
+        <!-- Save button -->
+        <button class="reset-btn" style="display: none;">Reset</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='LogisticsAnimation.js') }}"></script>
+</body>
+</html>

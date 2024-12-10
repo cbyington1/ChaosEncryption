@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorenz System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+                        
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="select-btn">
+            <span class="btn-text">Hénon-Heiles System</span>
+            <span class="arrow-dwn">
+                <i class="fa-solid fa-chevron-down"></i>
+            </span>
+        </div>
+
+        <ul class="list-items">
+            <li class="item">
+                <span class="item-text">X</span>
+                <div class="error-text">
+                    <i class="fa-solid fa-exclamation-circle"></i>
+                    <span class="error-message">Value must be between 0.1 and 0.25</span>
+                </div>
+                <input type="text" class="item-input X-input" placeholder="Type here">
+                <span class="question-mark"><i class="fa-solid fa-question-circle"></i><span class="tooltip-text">Controls the X spatial
+                    coordinate of the system (0.1 - 0.25)</span></span>
+            </li>
+            <li class="item">
+                <span class="item-text">Y</span>
+                <div class="error-text">
+                    <i class="fa-solid fa-exclamation-circle"></i>
+                    <span class="error-message">Value must be between 0.1 and 0.25</span>
+                </div>
+                <input type="text" class="item-input Y-input" placeholder="Type here">
+                <span class="question-mark"><i class="fa-solid fa-question-circle"></i><span class="tooltip-text">Controls the Y spatial
+                    coordinate of the system (0.1 - 0.25)</span></span>
+            </li>
+            <li class="item">
+                <span class="item-text">PX</span>
+                <div class="error-text">
+                    <i class="fa-solid fa-exclamation-circle"></i>
+                    <span class="error-message">Value must be between 0.1 and 0.25</span>
+                </div>
+                <input type="text" class="item-input PX-input" placeholder="Type here">
+                <span class="question-mark"><i class="fa-solid fa-question-circle"></i><span class="tooltip-text">Controls the momentum  of the X spatial
+                    coordinate of the system (0.1 - 0.25)</span></span>
+            </li>
+            <li class="item">
+                <span class="item-text">PY</span>
+                <div class="error-text">
+                    <i class="fa-solid fa-exclamation-circle"></i>
+                    <span class="error-message">Value must be between 0.1 and 0.25</span>
+                </div>
+                <input type="text" class="item-input PY-input" placeholder="Type here">
+                <span class="question-mark"><i class="fa-solid fa-question-circle"></i><span class="tooltip-text">Controls the momentum  of the Y spatial
+                    coordinate of the system (0.1 - 0.25)</span></span>
+            </li>
+            <li class="item">
+                <span class="item-text">Time</span>
+                <div class="error-text">
+                    <i class="fa-solid fa-exclamation-circle"></i>
+                    <span class="error-message">Value must be between 1000 and 100000</span>
+                </div>
+                <input type="text" class="item-input Time-input" placeholder="Type here">
+                <span class="question-mark"><i class="fa-solid fa-question-circle"></i><span class="tooltip-text">The time span for which the 
+                    integration of the Hénon-Heiles System will be performed (1000 - 100000)</span></span>
+            </li>
+        </ul>
+
+        <!-- Save button -->
+        <button class="save-btn" style="display: none;">Save</button>
+
+        <!-- Save button -->
+        <button class="reset-btn" style="display: none;">Reset</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='HenonAnimation.js') }}"></script>
+</body>
+</html>

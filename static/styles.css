@@ -1,0 +1,197 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #e3f2fd;
+}
+
+.container {
+    position: relative;
+    max-width: 320px;
+    width: 100%;
+    margin: 80px auto 30px;
+}
+
+.select-btn {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.select-btn .btn-text {
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+}
+
+.select-btn .arrow-dwn {
+    display: flex;
+    height: 21px;
+    width: 21px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 50%;
+    background: #3E96F4;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.select-btn.open .arrow-dwn {
+    transform: rotate(-180deg);
+}
+
+.list-items {
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.select-btn.open ~ .list-items {
+    display: block;
+}
+
+.list-items .item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    transition: 0.3s;
+    padding: 0 15px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+
+.item .item-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+
+/* Add this to your existing CSS file */
+.error-text {
+    position: absolute;
+    left: 12px; /* Adjust as needed */
+    top: 100%; /* 5 pixels below the bottom of the item-text */
+    display: flex; /* Align icon and text in a row */
+    align-items: center; /* Center vertically */
+}
+
+.error-text i {
+    font-size: 12px;
+    color: red; /* Adjust color as needed */
+    margin-right: 4px; /* Adjust margin as needed */
+}
+
+.error-message {
+    font-size: 12px;
+    color: red; /* Adjust color as needed */
+}
+
+/* Add this to your existing CSS file */
+.question-mark {
+    margin-left: 8px; /* Adjust the margin as needed */
+    position: relative;
+}
+
+.question-mark i {
+    color: grey; /* Set color of the question mark to grey */
+}
+
+.question-mark::before {
+    content: '\25CC'; /* Unicode character for an empty circle */
+    font-size: 14px;
+    color: white; /* Set color of the circle to white */
+    margin-right: 4px; /* Adjust the margin */
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 135px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    font-size: 10px;
+    z-index: 1;
+    top: 50%;
+    left: 200%; /* Adjust this value to control the distance from the question mark */
+    transform: translate(0, -50%);
+    opacity: 0;
+}
+
+.question-mark:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Add space between text field and question mark */
+.item-input {
+    margin-right: 8px; /* Adjust the margin as needed */
+}
+
+/* Styling for the input elements */
+.item-input {
+    margin-left: auto;
+    padding: 4px; /* Adjusted padding */
+    width: 50%; /* Set width to 50% */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.list-items .item:last-child {
+    margin-bottom: 70px; /* Adjusted margin at the bottom of the last item */
+}
+
+/* Style for the Save button */
+.save-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 85px;
+    padding: 10px;
+    background-color: grey;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style for the Save button */
+.reset-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    padding: 10px;
+    background-color: #3E96F4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-btn.pressed {
+    transform: scale(0.95); /* Example scale transformation */
+}
+
+.reset-btn.pressed {
+    transform: scale(0.95); /* Example scale transformation */
+}

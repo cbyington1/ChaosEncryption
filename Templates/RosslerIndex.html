@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rössler System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+                        
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="select-btn">
+            <span class="btn-text">Rössler System</span>
+            <span class="arrow-dwn">
+                <i class="fa-solid fa-chevron-down"></i>
+            </span>
+        </div>
+
+        <ul class="list-items">
+            <li class="item">
+                <span class="item-text">A</span>
+                <div class="error-text">
+                    <i class="fa-solid fa-exclamation-circle"></i>
+                    <span class="error-message">Value must be between 0.1 and 0.3</span>
+                </div>
+                <input type="text" class="item-input A-input" placeholder="Type here">
+                <span class="question-mark"><i class="fa-solid fa-question-circle"></i><span class="tooltip-text">Controls how much the 
+                    Y spatial variable influences the X spatial variable (0.1 - 0.3)</span></span>
+            </li>
+            <li class="item">
+                <span class="item-text">C</span>
+                <div class="error-text">
+                    <i class="fa-solid fa-exclamation-circle"></i>
+                    <span class="error-message">Value must be between 5.0 and 6.0</span>
+                </div>
+                <input type="text" class="item-input C-input" placeholder="Type here">
+                <span class="question-mark"><i class="fa-solid fa-question-circle"></i><span class="tooltip-text">Controls how much the 
+                    Z spatial variable influences the X spatial variable and Y spatial variable (5.0 - 6.0)</span></span>
+            </li>
+            <li class="item">
+                <span class="item-text">Time</span>
+                <div class="error-text">
+                    <i class="fa-solid fa-exclamation-circle"></i>
+                    <span class="error-message">Value must be between 50 and 200</span>
+                </div>
+                <input type="text" class="item-input time-input" placeholder="Type here">
+                <span class="question-mark"><i class="fa-solid fa-question-circle"></i><span class="tooltip-text">The time span for which the 
+                    integration of the Rössler System will be performed (50 - 200)</span></span>
+            </li>
+            <li class="item">
+                <span class="item-text">Iterations</span>
+                <div class="error-text">
+                    <i class="fa-solid fa-exclamation-circle"></i>
+                    <span class="error-message">Value must be between 50 and 200</span>
+                </div>
+                <input type="text" class="item-input iterations-input" placeholder="Type here">
+                <span class="question-mark"><i class="fa-solid fa-question-circle"></i><span class="tooltip-text">The number of iterations or chaotic 
+                    paths to generate in the Rössler System (50 - 200)</span></span>
+            </li>
+            <li class="item">
+                <span class="item-text">X</span>
+                <div class="error-text">
+                    <i class="fa-solid fa-exclamation-circle"></i>
+                    <span class="error-message">Value must be between 0.001 and 0.999</span>
+                </div>
+                <input type="text" class="item-input x-input" placeholder="Type here">
+                <span class="question-mark"><i class="fa-solid fa-question-circle"></i><span class="tooltip-text">Initial coordinate for 
+                    the X position (0.001 - 0.999)</span></span>
+            </li>
+            <li class="item">
+                <span class="item-text">Y</span>
+                <div class="error-text">
+                    <i class="fa-solid fa-exclamation-circle"></i>
+                    <span class="error-message">Value must be between 0.001 and 0.999</span>
+                </div>
+                <input type="text" class="item-input y-input" placeholder="Type here">
+                <span class="question-mark"><i class="fa-solid fa-question-circle"></i><span class="tooltip-text">Initial coordinate for 
+                    the Y position (0.001 - 0.999)</span></span>
+            </li>
+            <li class="item">
+                <span class="item-text">Z</span>
+                <div class="error-text">
+                    <i class="fa-solid fa-exclamation-circle"></i>
+                    <span class="error-message">Value must be between 0.001 and 0.999</span>
+                </div>
+                <input type="text" class="item-input z-input" placeholder="Type here">
+                <span class="question-mark"><i class="fa-solid fa-question-circle"></i><span class="tooltip-text">Initial coordinate for 
+                    the Z position (0.001 - 0.999)</span></span>
+            </li>
+        </ul>
+
+        <!-- Save button -->
+        <button class="save-btn" style="display: none;">Save</button>
+
+        <!-- Save button -->
+        <button class="reset-btn" style="display: none;">Reset</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='RosslerAnimation.js') }}"></script>
+</body>
+</html>
